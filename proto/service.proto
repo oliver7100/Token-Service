@@ -12,6 +12,15 @@ message GenerateTokenReqeust {
     string username = 1;
 }
 
+message ValidateTokenRequest {
+    string token = 1;
+}
+
+message ValidateTokenResponse {
+    bool valid = 1;
+}
+
 service AuthService {
     rpc GenerateToken(GenerateTokenReqeust) returns (GenerateTokenResponse) {};
+    rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse) {};
 }
