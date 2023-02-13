@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+message GenerateTokenResponse {
+    string token = 1;
+}
+
+message GenerateTokenReqeust {
+    string username = 1;
+}
+
+service AuthService {
+    rpc GenerateToken(GenerateTokenReqeust) returns (GenerateTokenResponse) {};
+}
