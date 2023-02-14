@@ -28,10 +28,6 @@ func (s *service) GenerateToken(ctx context.Context, req *GenerateTokenReqeust) 
 	}, nil
 }
 
-func (s *service) ValidateToken(ctx context.Context, req *ValidateTokenRequest) (*ValidateTokenResponse, error) {
-
-}
-
 func NewService() *service {
 	return &service{}
 }
